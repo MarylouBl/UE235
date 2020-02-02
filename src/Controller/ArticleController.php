@@ -57,6 +57,15 @@ class ArticleController extends AbstractController
             'article' => $article,
         ]);
     }
+    /**
+     * @Route("/{id}", name="article_all", methods={"GET"})
+     */
+    public function all(Article $article): Response
+    {
+        return $this->render('http://localhost:1234/article', [
+            'article' => $article,
+        ]);
+    }
 
     /**
      * @Route("/{id}/edit", name="article_edit", methods={"GET","POST"})

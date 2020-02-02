@@ -4,6 +4,7 @@
 
 {% block body %}
     <h1>Article index</h1>
+    <a href="{{ path('article_all', {'id': article.id}) }}">all</a>
 
     <table class="table">
         <thead>
